@@ -1,0 +1,29 @@
+{
+    "name": "helloworldpwa",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "workbox": "workbox generateSW"
+    },
+    "keywords": [],
+    "author": "Appliberated",
+    "license": "MIT",
+    "eslintConfig": {
+        "env": {
+            "browser": true,
+            "es6": true
+        },
+        "extends": "eslint:all",
+        "rules": {
+            "arrow-parens": ["error", "as-needed"],
+            "dot-location": "off",
+            "func-style": "off",
+            "linebreak-style": ["error", "windows"],
+            "max-len": ["error", 140],
+            "no-magic-numbers": ["error", { "ignore": [0, 1, 2] }], 
+            "one-var": "off",
+            "padded-blocks": "off",
+            "space-before-function-paren": "off"
+        }
+    }
+}

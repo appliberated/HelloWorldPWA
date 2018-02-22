@@ -1,0 +1,20 @@
+body, html {
+    height: 100%;
+}
+
+body {
+    align-items: center;
+    background-color: white;
+    color: black;
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.message {
+    font-size: 10vmax;
+    margin: 0;
+    text-align: center;
+}
