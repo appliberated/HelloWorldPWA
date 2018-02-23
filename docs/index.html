@@ -11,12 +11,16 @@
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
+    <header class="toolbar">
+        <h1 id="title" class="toolbar__title">Hello World</h1>
+        <menu class="toolbar__actions">
+            <li id="shuffle" class="toolbar__action"><img src="/images/icons/ic_shuffle_black_24px.svg" /></li>
+        </menu>
+    </header>
 
     <p class="message" id="message">Hello World!</p>
-    <!-- <p class="message" id="message">Dia dhaoibh, a dhomhain!</p> -->
 
     <script type="module" src="/scripts/main.js"></script>
-    
 
     <script>
         // Register service worker
@@ -27,5 +31,4 @@
         }
     </script>
 </body>
-
 </html>

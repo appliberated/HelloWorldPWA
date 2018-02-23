@@ -6,10 +6,10 @@
     "short_name": "Hello World PWA",
     "scope": "/",
     "start_url": "/",
-    "display": "minimal-ui",
+    "display": "standalone",
     "orientation": "any",
-    "theme_color": "#FFFFFF",
-    "background_color": "#FFFFFF",
+    "theme_color": "#ffffff",
+    "background_color": "#ff0000",
     "icons": [
         {
             "src": "/images/manifest/icons/windows10/Square71x71Logo.scale-400.png",
