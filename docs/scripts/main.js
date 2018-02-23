@@ -6,22 +6,10 @@ let helloWorldMessages;
 const messageElem = document.getElementById("message");
 const titleElem = document.getElementById("title");
 
-
-/**
- * 
- * @param {*} message 
- * @param {*} lang 
- */
 function setHelloWorldMessage(message, lang) {
     messageElem.textContent = message;
     document.title = `Hello World in ${lang}`;
-
 }
-
-
-// Apply the random colors as soon as possible
-// document.body.style.color = utils.getContrastYIQ(r, g, b);
-
 
 function shuffle() {
     // Generate and apply a random background color
@@ -34,19 +22,20 @@ function shuffle() {
     const randomIndex = utils.getRandomInt(helloWorldMessages.length);
     const [lang, message] = helloWorldMessages[randomIndex];
     messageElem.textContent = message;
-    document.title = `Hello World in ${lang}`;
-    title.textContent = document.title;
-    console.log(document.title);
+    titleElem.textContent = `Hello World in ${lang}`;
 }
 
+function initApp() {
+    fetch("/scripts/helloworld.json")
+        .then(response => response.json())
+        .then(data => {
+            helloWorldMessages = data;
+            shuffle();
+        });
 
-fetch("/scripts/helloworld.json")
-    .then(response => response.json())
-    .then(data => {
-        helloWorldMessages = data;
+    document.getElementById("shuffle").addEventListener("click", () => {
         shuffle();
     });
+}
 
-document.getElementById("shuffle").addEventListener("click", () => {
-    shuffle();
-});
+initApp();

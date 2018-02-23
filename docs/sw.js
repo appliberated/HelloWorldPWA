@@ -23,7 +23,7 @@ importScripts(
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "c7b0a09c67e9fbaa22e012beb15594a3"
+    "revision": "f0a437f5e02aeb9d28f3d4d091c292d7"
   },
   {
     "url": "scripts/helloworld.json",
@@ -31,7 +31,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.js",
-    "revision": "dff03e06969865e90eb7d480723a693b"
+    "revision": "0cc6d158cbe40a9cde05a15902d21906"
   },
   {
     "url": "scripts/utils.js",
@@ -39,7 +39,7 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "b3ca6de2fe2afaa67b4d09209207bb62"
+    "revision": "d24900187a5c27c63c641412d8bdd586"
   },
   {
     "url": "styles/normalize.css",
