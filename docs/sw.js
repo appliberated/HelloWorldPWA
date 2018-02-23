@@ -23,7 +23,7 @@ importScripts(
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "f0a437f5e02aeb9d28f3d4d091c292d7"
+    "revision": "b489ffed9a281b45fa8c641799ac1d9f"
   },
   {
     "url": "scripts/helloworld.json",
@@ -31,7 +31,7 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.js",
-    "revision": "0cc6d158cbe40a9cde05a15902d21906"
+    "revision": "8ba8f577a9e5fbafa906563717237d8a"
   },
   {
     "url": "scripts/utils.js",
@@ -39,11 +39,11 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "d24900187a5c27c63c641412d8bdd586"
+    "revision": "a4309d5388485bddb95bfa3714d0615a"
   },
   {
     "url": "styles/normalize.css",
-    "revision": "fda27b856c2e3cada6e0f6bfeccc2067"
+    "revision": "51e4e5bb1475d193fc34b28e93929bb6"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
