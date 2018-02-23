@@ -14,12 +14,19 @@
             "es6": true
         },
         "extends": "eslint:all",
+        "parserOptions": {
+            "sourceType": "module"
+        },
         "rules": {
+            "array-element-newline": "off",
             "arrow-parens": ["error", "as-needed"],
             "dot-location": "off",
             "func-style": "off",
             "linebreak-style": ["error", "windows"],
             "max-len": ["error", 140],
+            "multiline-ternary": ["error", "always-multiline"],
+            "no-extra-parens": ["error", "all", { "nestedBinaryExpressions": false }],
+            "no-ternary": "off",
             "no-magic-numbers": ["error", { "ignore": [0, 1, 2] }], 
             "one-var": "off",
             "padded-blocks": "off",

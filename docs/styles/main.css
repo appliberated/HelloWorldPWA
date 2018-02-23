@@ -4,17 +4,22 @@ body, html {
 
 body {
     align-items: center;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     display: flex;
-    font-family: sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     justify-content: center;
     margin: 0;
     padding: 0 1rem;
 }
 
 .message {
-    font-size: 10vmax;
+    
+    font-size: 7.5vw;
     margin: 0;
     text-align: center;
+}
+
+.contrast {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }

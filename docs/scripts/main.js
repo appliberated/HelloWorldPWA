@@ -1,45 +1,33 @@
-(function App() {
-
-    "use strict";
-
-    /**
-     * Returns a random integer between 0 and the specified value.
-     * @param {*} max 
-     * @returns
-     */
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * Math.floor(max));
-    }
+import * as utils from "/scripts/utils.js";
 
 
-    /** 
-     * 
-     */
-    function getRandomColor() {
-        return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-    }
+const messageElem = document.getElementById("message");
 
-    /**
-     * 
-     * @param {*} message 
-     * @param {*} lang 
-     */
-    function setHelloWorldMessage(message, lang) {
-        const messageElem = document.getElementById("message");
-        messageElem.textContent = message;
-        document.title = `Hello World in ${lang}`;
 
-    }
+/**
+ * 
+ * @param {*} message 
+ * @param {*} lang 
+ */
+function setHelloWorldMessage(message, lang) {
+    messageElem.textContent = message;
+    document.title = `Hello World in ${lang}`;
 
-    // Apply the random colors as soon as possible
-    document.body.style.backgroundColor = getRandomColor();
-    document.body.style.color = getRandomColor();
+}
 
-    fetch("/scripts/helloworld.json")
-        .then(response => response.json())
-        .then(data => {
-            const randomIndex = getRandomInt(data.length);
-            setHelloWorldMessage(data[randomIndex][1], data[randomIndex][0]);
-        });
 
-}());
+// Apply the random colors as soon as possible
+const [r, g, b] = utils.getRandomRGB();
+document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+// document.body.style.color = utils.getContrastYIQ(r, g, b);
+
+messageElem.classList.toggle("contrast", utils.needsContrastColor(r, g, b));
+
+fetch("/scripts/helloworld.json")
+    .then(response => response.json())
+    .then(data => {
+        const randomIndex = utils.getRandomInt(data.length);
+        setHelloWorldMessage(data[randomIndex][1], data[randomIndex][0]);
+    });
+
+
