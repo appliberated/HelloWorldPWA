@@ -3,10 +3,11 @@ body, html {
 }
 
 body {
-    align-items: center;
+    /* align-items: center; */
     background-color: black;
     color: white;
     display: flex;
+    flex-direction: column;
     /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
     font-family: sans-serif;
     font-size: 1rem;
@@ -21,18 +22,35 @@ menu {
     padding: 0;
 }
 
+main {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0 2rem;
+}
+
 .message {
     font-size: 7.5vw;
-    margin: 56px 0 0 0;
+    /* margin: 56px 0 0 0; */
+    margin: 0;
     /* padding: 1rem; */
     text-align: center;
     white-space: nowrap;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
-.contrast {
+.message--contrast {
     color: black;
 }
+
+.message::selection { 
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.message--contrast::selection { 
+    background-color: rgba(0, 0, 0, 0.25);
+ }
 
 /* ==========================================================================
    Toolbar
@@ -45,11 +63,11 @@ menu {
     color: black;
     display: flex;
     height: 56px;
-    left: 0;
+    /* left: 0; */
     padding: 0 0.5rem 0 1rem;
-    position: fixed;
-    right: 0;
-    top: 0;
+    /* position: fixed; */
+    /* right: 0; */
+    /* top: 0; */
 }
 
 .toolbar__title {
@@ -82,9 +100,11 @@ menu {
     width: 24px;
 }
 
-.toolbar__action:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
+@media (hover: hover) {
+    .toolbar__action:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+    }
 }
 
 .toolbar__action:active {
