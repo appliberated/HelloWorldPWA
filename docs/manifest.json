@@ -9,7 +9,7 @@
     "display": "standalone",
     "orientation": "any",
     "theme_color": "#ffffff",
-    "background_color": "#ff0000",
+    "background_color": "#0078d7",
     "icons": [
         {
             "src": "/images/manifest/icons/windows10/Square71x71Logo.scale-400.png",
@@ -166,26 +166,6 @@
         {
             "src": "/images/manifest/icons/windows10/StoreLogo.png",
             "sizes": "50x50"
-        },
-        {
-            "src": "/images/manifest/icons/windows10/BadgeLogo.scale-400.png",
-            "sizes": "96x96"
-        },
-        {
-            "src": "/images/manifest/icons/windows10/BadgeLogo.scale-200.png",
-            "sizes": "48x48"
-        },
-        {
-            "src": "/images/manifest/icons/windows10/BadgeLogo.scale-150.png",
-            "sizes": "36x36"
-        },
-        {
-            "src": "/images/manifest/icons/windows10/BadgeLogo.scale-125.png",
-            "sizes": "30x30"
-        },
-        {
-            "src": "/images/manifest/icons/windows10/BadgeLogo.scale-100.png",
-            "sizes": "24x24"
         },
         {
             "src": "/images/manifest/icons/windows10/SplashScreen.scale-400.png",

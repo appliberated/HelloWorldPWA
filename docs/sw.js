@@ -43,7 +43,15 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/normalize.css",
-    "revision": "51e4e5bb1475d193fc34b28e93929bb6"
+    "revision": "fda27b856c2e3cada6e0f6bfeccc2067"
+  },
+  {
+    "url": "images/icons/ic_refresh_black_24px.svg",
+    "revision": "24cd311a529af88ad5879723732d7f30"
+  },
+  {
+    "url": "images/icons/ic_search_black_24px.svg",
+    "revision": "46a97de5d8c0d86fb3362515efd81495"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
