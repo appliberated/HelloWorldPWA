@@ -20,10 +20,12 @@
         "rules": {
             "array-element-newline": "off",
             "arrow-parens": ["error", "as-needed"],
+            "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
             "dot-location": "off",
             "func-style": "off",
             "linebreak-style": ["error", "windows"],
             "max-len": ["error", 140],
+            "max-statements-per-line": ["error", { "max": 3 }],
             "multiline-ternary": ["error", "always-multiline"],
             "no-extra-parens": ["error", "all", { "nestedBinaryExpressions": false }],
             "no-ternary": "off",

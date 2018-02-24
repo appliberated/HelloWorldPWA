@@ -1,48 +1,92 @@
-/* eslint-disable require-jsdoc */
-/* eslint-disable max-statements */
-/* eslint-disable no-console */
+/*
+ * Hello World PWA (https://helloworldpwa.applbr.com/)
+ * Copyright (c) 2018 Appliberated (https://www.appliberated.com)
+ * Licensed under MIT (https://github.com/appliberated/HelloWorldPWA/blob/master/LICENSE)
+ */
 
 import * as utils from "/scripts/utils.js";
 
-let helloWorldMessages;
-const titleElem = document.getElementById("title");
-const searchElem = document.getElementById("search");
-const mainElem = document.getElementById("main");
-const messageElem = document.getElementById("message");
+/** 
+ * The Hello World messages array, to be loaded from JSON, and empty by default.
+ */
+let helloWorldMessages = [];
 
+/** 
+ * The main DOM elements.
+ */
+const titleEl = document.getElementById("title");
+const searchEl = document.getElementById("search");
+const mainEl = document.getElementById("main");
+const messageEl = document.getElementById("message");
+
+/**
+ * Sets a new Hello World message.
+ * @param {number} index The index in the Hello World messages array.
+ * @returns {void}
+ */
 function setHelloWorldMessage(index) {
+    // Update the Hello World message, language, and search action link
+    const [lang, message] = helloWorldMessages[index];
+    messageEl.textContent = message;
+    titleEl.textContent = `Hello World in ${lang}`;
+    searchEl.href = `https://www.google.com/search?q=${message}`;
 
+    // Set the largest possible Hello World message text font size that fits
+    utils.fitTextResponsive(messageEl, mainEl);
+}
+
+/** 
+ * Sets a random Hello World message and background color.
+ * @returns {void}
+ */
+function shuffle() {
     // First, generate and apply a random background color, and add text contrast effect, if needed
     const [r, g, b] = utils.getRandomRGB();
     document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-    messageElem.classList.toggle("message--contrast", utils.needsContrastColor(r, g, b));
+    messageEl.classList.toggle("message--contrast", utils.needsContrastColor(r, g, b));
 
-    // Update the Hello World message, language, and search action link
-    const [lang, message] = helloWorldMessages[index];
-    messageElem.textContent = message;
-    titleElem.textContent = `Hello World in ${lang}`;
-    searchElem.href = `https://www.google.com/search?q=${message}`;
-
-    // Set the largest possible Hello World message text font size that fits
-    utils.fitTextResponsive(messageElem, mainElem);
+    // Set a Hello World message in a random language
+    if (helloWorldMessages.length > 0) {
+        const randomIndex = utils.getRandomInt(helloWorldMessages.length);
+        setHelloWorldMessage(randomIndex);
+    }
 }
 
-function shuffle() {
-    const randomIndex = utils.getRandomInt(helloWorldMessages.length);
-    setHelloWorldMessage(randomIndex);
+/** 
+ * Sets the default Hello World message and background color.
+ * @returns {void}
+ */
+function reset() {
+    setHelloWorldMessage(0);
+
+    // Leave it to the CSS to show the default background color
+    document.body.removeAttribute("style");
+    messageEl.classList.remove("message--contrast");
 }
 
+/** 
+ * Initializes the app.
+ * @returns {void}
+ */
 function initApp() {
+    // Fetch the Hello World messages from JSON
     fetch("/scripts/helloworld.json")
         .then(response => response.json())
         .then(data => {
             helloWorldMessages = data;
+
+            // We have messages, so we can show the toolbar
+            const toolbarEl = document.getElementById("toolbar");
+            toolbarEl.classList.add("toolbar--visible");
+
+            // First shuffle: always show a message in a random language at startup
             shuffle();
         });
 
-    document.getElementById("shuffle").addEventListener("click", () => {
-        shuffle();
-    });
+    // Attach the Shuffle action item events: click => shuffle, right-click/long-tap => reset 
+    const shuffleEl = document.getElementById("shuffle");
+    shuffleEl.addEventListener("click", () => { shuffle(); });
+    shuffleEl.addEventListener("contextmenu", event => { reset(); event.preventDefault(); });
 }
 
 initApp();

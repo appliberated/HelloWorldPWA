@@ -1,4 +1,5 @@
 [
+    ["English", "Hello World!"],
     ["Afrikaans", "Hallo, wêreld!"],
     ["Albanian", "Pershëndetje Botë"],
     ["Arabic", "أهلاً بالعالم"],
@@ -19,7 +20,6 @@
     ["Croatian", "Bok Svijete!"],
     ["Danish", "Hej, Verden!"],
     ["Dutch", "Hallo, wereld!"],
-    ["English", "Hello World!"],
     ["Esperanto", "Saluton mondo!"],
     ["Estonian", "Tere maailm!"],
     ["Finnish", "Hei maailma!"],

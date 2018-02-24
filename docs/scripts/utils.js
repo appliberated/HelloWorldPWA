@@ -23,8 +23,3 @@ export function fitTextResponsive(child, parent) {
     child.style.fontSize = "1vw";
     child.style.fontSize = `${parent.clientWidth / child.clientWidth}vw`;
 }
-
-// export function getContrastYIQ(red, green, blue) {
-//     const yiq = ((red * 299) + (green * 587) + (blue * 114)) / 1000;
-//     return yiq >= 128 ? "black" : "white";
-// }
