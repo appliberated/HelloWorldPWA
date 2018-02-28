@@ -23,35 +23,35 @@ importScripts(
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "182dba9958a5a0603fb14817d96247ae"
+    "revision": "8e69159b542649f37170a4c1429ffa32"
   },
   {
     "url": "scripts/helloworld.json",
-    "revision": "d12cc2c5fb798c039c50bed1d041d186"
+    "revision": "18e2041efb50449379decffb0eac60ee"
   },
   {
     "url": "scripts/main.js",
-    "revision": "9c7cd989627d4296c1228b98e22935eb"
+    "revision": "8e46f07fa58519cb18a9861645a8adaf"
   },
   {
     "url": "scripts/utils.js",
-    "revision": "9940f4954578e6e158efaac45eca7fe4"
+    "revision": "34d801c827e8d80c7325ebad07e8dc32"
   },
   {
     "url": "styles/main.css",
-    "revision": "352028bf16515bcadc2471a92f7af8e5"
+    "revision": "5b6d95b976d14b2c2047b6a13465e587"
   },
   {
     "url": "styles/normalize.css",
-    "revision": "fda27b856c2e3cada6e0f6bfeccc2067"
+    "revision": "51e4e5bb1475d193fc34b28e93929bb6"
+  },
+  {
+    "url": "images/icons/ic_info_outline_black_24px.svg",
+    "revision": "3b1d479abe000b3ee42b1e12ff4e6003"
   },
   {
     "url": "images/icons/ic_refresh_black_24px.svg",
     "revision": "24cd311a529af88ad5879723732d7f30"
-  },
-  {
-    "url": "images/icons/ic_search_black_24px.svg",
-    "revision": "46a97de5d8c0d86fb3362515efd81495"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();

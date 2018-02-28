@@ -15,7 +15,6 @@ let helloWorldMessages = [];
  * The main DOM elements.
  */
 const titleEl = document.getElementById("title");
-const searchEl = document.getElementById("search");
 const mainEl = document.getElementById("main");
 const messageEl = document.getElementById("message");
 
@@ -25,11 +24,10 @@ const messageEl = document.getElementById("message");
  * @returns {void}
  */
 function setHelloWorldMessage(index) {
-    // Update the Hello World message, language, and search action link
+    // Update the Hello World message and language
     const [lang, message] = helloWorldMessages[index];
     messageEl.textContent = message;
     titleEl.textContent = `Hello World in ${lang}`;
-    searchEl.href = `https://www.google.com/search?q=${message}`;
 
     // Set the largest possible Hello World message text font size that fits
     utils.fitTextResponsive(messageEl, mainEl);
@@ -43,7 +41,7 @@ function shuffle() {
     // First, generate and apply a random background color, and add text contrast effect, if needed
     const [r, g, b] = utils.getRandomRGB();
     document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-    messageEl.classList.toggle("message--contrast", utils.needsContrastColor(r, g, b));
+    messageEl.classList.toggle("message--contrast", utils.isLightColor(r, g, b));
 
     // Set a Hello World message in a random language
     if (helloWorldMessages.length > 0) {

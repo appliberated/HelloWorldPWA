@@ -1,3 +1,13 @@
+/*
+ * Hello World PWA (https://helloworldpwa.applbr.com/)
+ * Copyright (c) 2018 Appliberated (https://www.appliberated.com)
+ * Licensed under MIT (https://github.com/appliberated/HelloWorldPWA/blob/master/LICENSE)
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
 body, html {
     height: 100%;
 }
@@ -31,28 +41,6 @@ main {
     justify-content: center;
     margin: 0 2rem;
 }
-
-.message {
-    font-size: 7.5vw;
-    /* margin: 56px 0 0 0; */
-    margin: 0;
-    /* padding: 1rem; */
-    text-align: center;
-    white-space: nowrap;
-    /* overflow: hidden; */
-}
-
-.message--contrast {
-    color: black;
-}
-
-.message::selection { 
-    background-color: rgba(255, 255, 255, 0.25);
-}
-
-.message--contrast::selection { 
-    background-color: rgba(0, 0, 0, 0.25);
- }
 
 /* ==========================================================================
    Toolbar
@@ -119,6 +107,30 @@ main {
     background-image: url("/images/icons/ic_refresh_black_24px.svg");
 }
 
-.icon--search {
-    background-image: url("/images/icons/ic_search_black_24px.svg");
+.icon--info {
+    background-image: url("/images/icons/ic_info_outline_black_24px.svg");
+}
+
+/* ==========================================================================
+   Message
+   ========================================================================== */
+
+.message {
+    font-size: 7.5vw;
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+    /* overflow: hidden; */
+}
+
+.message--contrast {
+    color: black;
+}
+
+.message::selection { 
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.message--contrast::selection { 
+    background-color: rgba(0, 0, 0, 0.25);
 }
