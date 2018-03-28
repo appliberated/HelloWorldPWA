@@ -6,12 +6,12 @@
 
 import * as utils from "/scripts/utils.js";
 
-/** 
+/**
  * The Hello World messages array, to be loaded from JSON, and empty by default.
  */
 let helloWorldMessages = [];
 
-/** 
+/**
  * The main DOM elements.
  */
 const titleEl = document.getElementById("title");
@@ -33,7 +33,7 @@ function setHelloWorldMessage(index) {
     utils.fitTextResponsive(messageEl, mainEl);
 }
 
-/** 
+/**
  * Sets a random Hello World message and background color.
  * @returns {void}
  */
@@ -50,7 +50,7 @@ function shuffle() {
     }
 }
 
-/** 
+/**
  * Sets the default Hello World message and background color.
  * @returns {void}
  */
@@ -62,7 +62,7 @@ function reset() {
     messageEl.classList.remove("message--contrast");
 }
 
-/** 
+/**
  * Initializes the app.
  * @returns {void}
  */
@@ -81,9 +81,9 @@ function initApp() {
             shuffle();
         });
 
-    // Attach the Shuffle action item events: click => shuffle, right-click/long-tap => reset 
+    // Attach the Shuffle action item events: click => shuffle, right-click/long-tap => reset
     const shuffleEl = document.getElementById("shuffle");
-    shuffleEl.addEventListener("click", () => { shuffle(); });
+    shuffleEl.addEventListener("click", event => { shuffle(); event.preventDefault(); });
     shuffleEl.addEventListener("contextmenu", event => { reset(); event.preventDefault(); });
 }
 

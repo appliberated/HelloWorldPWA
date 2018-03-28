@@ -3,7 +3,7 @@
     "dir": "ltr",
     "name": "Hello World PWA",
     "description": "Hello World PWA",
-    "short_name": "Hello World PWA",
+    "short_name": "Hello World",
     "scope": "/",
     "start_url": "/",
     "display": "standalone",
