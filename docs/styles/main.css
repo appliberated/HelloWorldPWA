@@ -13,7 +13,7 @@ body, html {
 }
 
 body {
-    background-color: #3D3D3D; /* default background color - from PWA logo */
+    background-color: #3D3D3D; /* default background color */
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -69,6 +69,7 @@ main {
 }
 
 .toolbar__actions {
+    -webkit-tap-highlight-color: transparent;
     align-items: center;
     display: inline-flex;
 }
@@ -80,8 +81,7 @@ main {
     cursor: pointer;
     display: block;
     height: 24px;
-    margin-right: 8px;
-    padding: 8px;
+    padding: 12px;
     width: 24px;
 }
 

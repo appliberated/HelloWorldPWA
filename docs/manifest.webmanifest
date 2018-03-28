@@ -8,7 +8,7 @@
     "start_url": "/",
     "display": "standalone",
     "orientation": "any",
-    "theme_color": "#3D3D3D",
+    "theme_color": "#000000",
     "background_color": "#FFFFFF",
     "icons": [
         {
