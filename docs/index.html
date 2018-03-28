@@ -3,27 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Hello World PWA - A Multi-Language Progressive Web App</title>
     <meta name="description" content="Says &quot;Hello World!&quot; in a random human language, on a random background color. It's a PWA, so you can try it in your browser, and add it to your home screen.">
 
     <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="/images/manifest/icons/ios/ios-appicon-180-180.png">
+    <meta name="theme-color" content="#3D3D3D"/>
+
     <link rel="stylesheet" href="/styles/normalize.css">
     <link rel="stylesheet" href="/styles/main.css">
-    <meta name="theme-color" content="#ffffff"/>
 </head>
 
 <body>
     <header class="toolbar" id="toolbar">
         <h1 id="title" class="toolbar__title">Hello World</h1>
-        <section class="toolbar__actions">
+        <div class="toolbar__actions">
             <a href="#" id="shuffle">
                 <i class="toolbar__action icon--refresh" title="Reload message"></i>
             </a>
             <a href="https://github.com/appliberated/HelloWorldPWA" target="_blank" rel="noopener">
                 <i class="toolbar__action icon--info" title="App info"></i>
             </a>
-        </section>
+        </div>
     </header>
     <main id="main">
         <p class="message" id="message">Hello World!</p>

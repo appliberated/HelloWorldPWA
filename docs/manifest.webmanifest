@@ -2,14 +2,14 @@
     "lang": "en",
     "dir": "ltr",
     "name": "Hello World PWA",
-    "description": "Hello World PWA",
+    "description": "Says \"Hello World!\" in a random human language, on a random background color. It's a PWA, so you can try it in your browser, and add it to your home screen.",
     "short_name": "Hello World",
     "scope": "/",
     "start_url": "/",
     "display": "standalone",
     "orientation": "any",
-    "theme_color": "#ffffff",
-    "background_color": "#0078d7",
+    "theme_color": "#3D3D3D",
+    "background_color": "#FFFFFF",
     "icons": [
         {
             "src": "/images/manifest/icons/windows10/Square71x71Logo.scale-400.png",

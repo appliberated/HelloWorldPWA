@@ -13,8 +13,8 @@ body, html {
 }
 
 body {
-    background-color: #0078d7; /* default background color */
-    color: white;
+    background-color: #3D3D3D; /* default background color - from PWA logo */
+    color: #FFFFFF;
     display: flex;
     flex-direction: column;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
