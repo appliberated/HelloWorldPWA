@@ -4,7 +4,8 @@ module.exports = {
     "globDirectory": "./docs",
     "globPatterns": [
         "*.html",
-        "scripts/*.{js,json}",
+        "scripts/*.js",
+        "data/*.json",
         "styles/*.css",
         "images/icons/*.svg"
     ],

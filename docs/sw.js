@@ -24,20 +24,20 @@ self.__precacheManifest = [
     "revision": "93d1d4b39635027383e561b7f65ac4bb"
   },
   {
-    "url": "scripts/helloworld.json",
-    "revision": "18e2041efb50449379decffb0eac60ee"
-  },
-  {
     "url": "scripts/main.js",
-    "revision": "92682c687c6201586942c29a6d63f72b"
+    "revision": "0b6ef27f9c58204647b43ccacfbc83a7"
   },
   {
     "url": "scripts/utils.js",
     "revision": "34d801c827e8d80c7325ebad07e8dc32"
   },
   {
+    "url": "data/helloworld.json",
+    "revision": "18e2041efb50449379decffb0eac60ee"
+  },
+  {
     "url": "styles/main.css",
-    "revision": "610bafb7daf4375f3feab414a7d8d992"
+    "revision": "56ab0a4ec7ef575d94e06fa0fb4c6456"
   },
   {
     "url": "styles/normalize.css",

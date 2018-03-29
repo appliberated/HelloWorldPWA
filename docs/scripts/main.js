@@ -68,7 +68,7 @@ function reset() {
  */
 function initApp() {
     // Fetch the Hello World messages from JSON
-    fetch("/scripts/helloworld.json")
+    fetch("/data/helloworld.json")
         .then(response => response.json())
         .then(data => {
             helloWorldMessages = data;
