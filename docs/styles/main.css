@@ -13,7 +13,7 @@ body, html {
 }
 
 body {
-    background-color: #3D3D3D; /* default background color */
+    background-color: #000000; /* default background color */
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
