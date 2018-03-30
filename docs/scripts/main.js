@@ -1,7 +1,11 @@
-/*
- * Hello World PWA (https://helloworldpwa.applbr.com/)
- * Copyright (c) 2018 Appliberated (https://www.appliberated.com)
- * Licensed under MIT (https://github.com/appliberated/HelloWorldPWA/blob/master/LICENSE)
+/**
+ * Hello World PWA
+ * {@link https://helloworldpwa.applbr.com Progressive Web App }
+ * {@link https://github.com/appliberated/HelloWorldPWA GitHub Repository}
+ * @copyright (c) 2018 Appliberated
+ * @license MIT
+ *
+ * @file Main app script.
  */
 
 import * as utils from "/scripts/utils.js";
@@ -14,6 +18,7 @@ let helloWorldMessages = [];
 /**
  * The main DOM elements.
  */
+const themeColorMetaEl = document.querySelector("meta[name=theme-color]");
 const titleEl = document.getElementById("title");
 const mainEl = document.getElementById("main");
 const messageEl = document.getElementById("message");
@@ -39,9 +44,12 @@ function setHelloWorldMessage(index) {
  */
 function shuffle() {
     // First, generate and apply a random background color, and add text contrast effect, if needed
-    const [r, g, b] = utils.getRandomRGB();
-    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-    messageEl.classList.toggle("message--contrast", utils.isLightColor(r, g, b));
+    const color = utils.getRandomRGB();
+    const rgbString = `rgb(${color.red}, ${color.green}, ${color.blue})`;
+    document.body.style.backgroundColor = rgbString;
+    messageEl.classList.toggle("message--dark-foreground", !utils.shouldUseLightForegroundOnBackground(color));
+    // Update the theme-color meta tag to update the browser toolbar color and/or the status bar color (Android Chrome)
+    themeColorMetaEl.setAttribute("content", rgbString);
 
     // Set a Hello World message in a random language
     if (helloWorldMessages.length > 0) {

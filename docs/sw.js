@@ -8,10 +8,12 @@
  * The rest of the code is auto-generated. Please don't update this file
  * directly; instead, make changes to your Workbox build configuration
  * and re-run your build process.
- * See https://goo.gl/2aRDsh
+ * See https://goo.gl/YYPcyY
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.0.1/workbox-sw.js");
+importScripts(
+  "https://storage.googleapis.com/workbox-cdn/releases/3.0.0-beta.0/workbox-sw.js"
+);
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -25,11 +27,11 @@ self.__precacheManifest = [
   },
   {
     "url": "scripts/main.js",
-    "revision": "0b6ef27f9c58204647b43ccacfbc83a7"
+    "revision": "d6e6e4165682a57f5ecd39e4a0f2d9b3"
   },
   {
     "url": "scripts/utils.js",
-    "revision": "34d801c827e8d80c7325ebad07e8dc32"
+    "revision": "ce2a5f71c49e6ae0225abc5f27551c57"
   },
   {
     "url": "data/helloworld.json",
@@ -37,7 +39,7 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "56ab0a4ec7ef575d94e06fa0fb4c6456"
+    "revision": "8e753291030c1dd8766aa070ea19e406"
   },
   {
     "url": "styles/normalize.css",
@@ -45,7 +47,7 @@ self.__precacheManifest = [
   },
   {
     "url": "images/icons/ic_info_outline_black_24px.svg",
-    "revision": "3b1d479abe000b3ee42b1e12ff4e6003"
+    "revision": "6c68694245da540d4e0fffd2883e4583"
   },
   {
     "url": "images/icons/ic_refresh_black_24px.svg",

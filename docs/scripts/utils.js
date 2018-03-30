@@ -1,10 +1,16 @@
-/*
- * Hello World PWA (https://helloworldpwa.applbr.com/)
- * Copyright (c) 2018 Appliberated (https://www.appliberated.com)
- * Licensed under MIT (https://github.com/appliberated/HelloWorldPWA/blob/master/LICENSE)
+/**
+ * Hello World PWA
+ * {@link https://helloworldpwa.applbr.com Progressive Web App }
+ * {@link https://github.com/appliberated/HelloWorldPWA GitHub Repository}
+ * @copyright (c) 2018 Appliberated
+ * @license MIT
+ *
+ * @file Utility functions.
  */
 
 /* eslint-disable no-magic-numbers */
+
+const CONTRAST_LIGHT_ITEM_THRESHOLD = 3;
 
 /**
  * Returns a random integer between 0 and the specified value.
@@ -15,25 +21,40 @@ export function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
-/** 
+/**
  * Returns a random RGB color.
  * @returns {number[]} A RGB color array.
  */
 export function getRandomRGB() {
-    return [getRandomInt(256), getRandomInt(256), getRandomInt(256)];
+    return {red: getRandomInt(256), green: getRandomInt(256), blue: getRandomInt(256)};
 }
 
 /**
- * Gets whether a color is light or dark.
- * @param {number} red The red component of the color.
- * @param {number} green The green component of the color.
- * @param {number} blue The blue component of the color.
- * @returns {boolean} true if the color is a light one, false otherwise.
+ * Calculates the contrast between the given color and white, using the algorithm provided by the WCAG v2 in
+ * {@link http://www.w3.org/TR/WCAG20/#contrast-ratiodef}.
+ * Based on {@link https://goo.gl/FUWAta Chromium ColorUtils Java class}.
+ * @param {Object} color The input color.
+ * @returns {number} The contrast value.
  */
-export function isLightColor(red, green, blue) {
-    const yiq = ((red * 299) + (green * 587) + (blue * 114)) / 1000;
-    // 192 is our opinionated value
-    return yiq >= 192;
+function getContrastForColor(color) {
+    let bgR = color.red / 255;
+    let bgG = color.green / 255;
+    let bgB = color.blue / 255;
+    bgR = bgR < 0.03928 ? bgR / 12.92 : Math.pow((bgR + 0.055) / 1.055, 2.4);
+    bgG = bgG < 0.03928 ? bgG / 12.92 : Math.pow((bgG + 0.055) / 1.055, 2.4);
+    bgB = bgB < 0.03928 ? bgB / 12.92 : Math.pow((bgB + 0.055) / 1.055, 2.4);
+    const bgL = (0.2126 * bgR) + (0.7152 * bgG) + (0.0722 * bgB);
+    return Math.abs(1.05 / (bgL + 0.05));
+}
+
+/**
+ * Check whether lighter or darker foreground text should be used depending on the given background color.
+ * Based on {@link https://goo.gl/4Lfuh2 Chromium ColorUtils Java class}.
+ * @param {Object} backgroundColor The background color value which is being queried.
+ * @returns {boolean} Whether light colored elements should be used.
+ */
+export function shouldUseLightForegroundOnBackground(backgroundColor) {
+    return getContrastForColor(backgroundColor) >= CONTRAST_LIGHT_ITEM_THRESHOLD;
 }
 
 /**
