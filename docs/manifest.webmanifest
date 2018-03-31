@@ -9,7 +9,7 @@
     "display": "standalone",
     "orientation": "any",
     "theme_color": "#000000",
-    "background_color": "#FFFFFF",
+    "background_color": "#1e90ff",
     "icons": [
         {
             "src": "/images/manifest/icons/hello-world-pwa-icon-16.png",
