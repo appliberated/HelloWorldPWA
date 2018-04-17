@@ -1,11 +1,6 @@
-/**
- * Hello World PWA
- * {@link https://helloworldpwa.applbr.com Progressive Web App }
- * {@link https://github.com/appliberated/HelloWorldPWA GitHub Repository}
- * @copyright (c) 2018 Appliberated
- * @license MIT
- *
- * @file Main app script.
+/*
+ *  Hello World PWA. Copyright (c) 2018 HWALab. MIT License.
+ *  https://www.hwalab.com/helloworldpwa/
  */
 
 import * as utils from "/scripts/utils.js";

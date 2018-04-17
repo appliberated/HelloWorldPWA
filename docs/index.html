@@ -20,7 +20,7 @@
         <h1 id="title" class="toolbar__title">Hello World</h1>
         <div class="toolbar__actions">
             <i id="shuffle" class="toolbar__action icon--refresh" title="Reload message"></i>
-            <a href="https://github.com/appliberated/HelloWorldPWA" target="_blank" rel="noopener">
+            <a href="https://www.hwalab.com/helloworldpwa/" target="_blank" rel="noopener">
                 <i class="toolbar__action icon--info" title="App info"></i>
             </a>
         </div>
@@ -33,9 +33,9 @@
 
     <script>
         // Register service worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js');
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("/sw.js");
             });
         }
     </script>

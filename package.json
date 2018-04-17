@@ -1,12 +1,12 @@
 {
     "name": "helloworldpwa",
     "version": "1.0.0",
-    "description": "",
+    "description": "Says \"Hello World!\" in a random human language, on a random background color. It's a PWA, so you can try it in your browser, and add it to your home screen.",
     "scripts": {
         "workbox": "workbox generateSW"
     },
     "keywords": [],
-    "author": "Appliberated",
+    "author": "HWALab",
     "license": "MIT",
     "eslintConfig": {
         "env": {

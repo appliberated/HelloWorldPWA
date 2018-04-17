@@ -21,15 +21,15 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.0.1/workbox
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "9e32e27861b06dcc8397b934d4c2d7d8"
+    "revision": "87eecf4de281eb63d23398b95d11af80"
   },
   {
     "url": "scripts/main.js",
-    "revision": "d6e6e4165682a57f5ecd39e4a0f2d9b3"
+    "revision": "11590f3687a8296098e0980d744383f1"
   },
   {
     "url": "scripts/utils.js",
-    "revision": "ce2a5f71c49e6ae0225abc5f27551c57"
+    "revision": "48b063f26eaf52a32f18929ff84978e7"
   },
   {
     "url": "data/helloworld.json",
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "styles/main.css",
-    "revision": "8e753291030c1dd8766aa070ea19e406"
+    "revision": "40a40e6967633a53e5c095675109aaeb"
   },
   {
     "url": "styles/normalize.css",

@@ -11,11 +11,11 @@
 
 ## Contributions
 
-Contributions are welcome! For feature requests and bug reports please [submit an issue](https://github.com/appliberated/HelloWorldPWA/issues).
+Contributions are welcome! For feature requests and bug reports please [submit an issue](https://github.com/hwalab-developer/helloworldpwa/issues).
 
 ## Sponsor
 
-Hello World PWA (and all Appliberated free apps) are supported by [East-Tec](http://www.east-tec.com), the home of [east-tec Eraser](http://www.east-tec.com/eraser/), the privacy tool that quickly and securely covers your online and PC tracks.
+Hello World PWA (and all HWALab free apps) are supported by [East-Tec](http://www.east-tec.com), the home of [east-tec Eraser](http://www.east-tec.com/eraser/), the privacy tool that quickly and securely covers your online and PC tracks.
 
 ## License
 
